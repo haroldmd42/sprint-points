@@ -4,49 +4,73 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full bg-gray-100 flex flex-col items-center justify-start py-10 px-4">
-      {/* Título y descripción */}
-      <div className="text-center mb-12 max-w-2xl">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4 flex justify-center items-center gap-2">
-          Bienvenido a Sprint Planning <span>🚦</span>
-        </h1>
-        <p className="text-lg text-gray-600">
-          Esta aplicación te permite estimar Historias de Usuario (HU) dentro de un Sprint
-          utilizando un sistema visual tipo semáforo para evaluar su complejidad.
-        </p>
-      </div>
+    <>
+      <div className="traffic-background"></div>
 
-      {/* Contenedor de tarjetas */}
-      <div className="flex flex-row gap-8 flex-nowrap justify-center w-full max-w-6xl">
-        {/* Card Administrador */}
-        <div className="bg-admin shadow-md rounded-xl p-6 w-full">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Administrador</h2>
-          <p className="text-gray-600 mb-4">
-            Crea y administra las Historias de Usuario, define los participantes del sprint y analiza los resultados de las estimaciones.
+      {/* Contenedor general centrado */}
+      <div className="container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center position-relative">
+        {/* Título y descripción */}
+        <div className="text-center mb-5">
+          <h1 className="display-4 fw-bold">
+            <span className="text-danger">Bienvenido a </span>
+            <span className="text-warning">Sprint </span>
+            <span className="text-success">Points</span>
+          </h1>
+          <p className="lead text-dark mb-4 bold">
+            Esta aplicación te permite estimar Historias de Usuario (HU) dentro
+            de un Sprint utilizando un sistema visual tipo semáforo para evaluar
+            su complejidad.
           </p>
-          <button
-            onClick={() => navigate("/admin")}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg w-full"
-          >
-            Ingresar como Administrador
-          </button>
         </div>
 
-        {/* Card Estimador */}
-        <div className="bg-estimator shadow-md rounded-xl mb-4  w-full ">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-2">Estimador</h2>
-          <p className="text-gray-600 mb-4">
-            Participa en las sesiones de estimación, asigna niveles de esfuerzo a las HU y colabora en la planificación del sprint.
-          </p>
-          <button
-            onClick={() => navigate("/estimador")}
-            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg w-full"
-          >
-            Ingresar como Estimador
-          </button>
+        {/* Tarjetas */}
+        <div className="container ">
+          
+          <div className="row justify-content-center g-4">
+            
+            {/* Card Administrador */}
+            <div className=" col-12 col-md-6 col-lg-5 d-flex" >
+              
+              <div className="card border-success h-100 w-100">
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title text-success">Administrador</h5>
+                  <p className="card-text flex-grow-1">
+                    Crea y administra las Historias de Usuario, define los
+                    participantes del sprint y analiza los resultados de las
+                    estimaciones.
+                  </p>
+                  <button
+                    className="btn btn-success w-100 mt-auto"
+                    onClick={() => navigate("/admin")}
+                  >
+                    Ingresar como Administrador
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Card Estimador */}
+            <div className="col-12 col-md-6 col-lg-5 d-flex">
+              <div className="card border-warning h-100 w-100">
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title text-warning">Estimador</h5>
+                  <p className="card-text flex-grow-1">
+                    Participa en las sesiones de estimación, asigna niveles de
+                    esfuerzo a las HU y colabora en la planificación del sprint.
+                  </p>
+                  <button
+                    className="btn btn-warning text-light w-100 mt-auto"
+                    onClick={() => navigate("/estimador")}
+                  >
+                    Ingresar como Estimador
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
