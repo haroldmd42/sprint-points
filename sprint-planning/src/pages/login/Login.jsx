@@ -1,14 +1,14 @@
 export function Login() {
   return (
     <>
-      <div className="traffic-background"></div>
+      
 
       <div className="container-fluid min-vh-100 d-flex justify-content-center align-items-center position-relative">
         <div
           className="card text-dark p-4 shadow-lg"
           style={{ maxWidth: "400px", width: "100%", borderRadius: "1rem" }}
         >
-          <h2 className="text-center mb-4">Iniciar sesión</h2>
+          <h2 className="text-center mb-4 text-success">Iniciar sesión</h2>
           <form>
             <div className="mb-3">
               <label htmlFor="username" className="form-label text-dark">
