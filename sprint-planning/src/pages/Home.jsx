@@ -14,7 +14,7 @@ function Home() {
           <h1 className="display-4 fw-bold">
             <span className="text-danger">Bienvenido a </span>
             <span className="text-warning">Sprint </span>
-            <span className="text-success">Points</span>
+            <span className="text-success">Points!</span>
           </h1>
           <p className="lead text-dark mb-4 bold">
             Esta aplicación te permite estimar Historias de Usuario (HU) dentro
