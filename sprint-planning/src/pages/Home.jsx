@@ -45,7 +45,7 @@ function Home() {
             </div>
 
             {/* Sección Estimador */}
-            <div className="flex-fill bg-dark text-light d-flex flex-column justify-content-center align-items-center p-4">
+            <div className="flex-fill bg-dards text-light d-flex flex-column justify-content-center align-items-center p-4">
               <h2 className="fw-bold mb-3">Estimador</h2>
               <p className="text-center mb-4 px-4">
                 Participa en las sesiones de estimación, asigna niveles de

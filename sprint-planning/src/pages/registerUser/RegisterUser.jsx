@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function RegisterUser() {
   const [form, setForm] = useState({
@@ -121,7 +122,9 @@ export function RegisterUser() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label text-dark">Imagen de perfil (opcional)</label>
+            <label className="form-label text-dark">
+              Imagen de perfil (opcional)
+            </label>
             <input
               type="file"
               className="form-control"
@@ -147,7 +150,9 @@ export function RegisterUser() {
                 onClick={() => setShowPassword(!showPassword)}
                 style={{ cursor: "pointer" }}
               >
-                <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
+                <i
+                  className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}
+                ></i>
               </span>
             </div>
           </div>
@@ -159,16 +164,19 @@ export function RegisterUser() {
           <div className="text-center mt-3">
             <p>
               Ya tengo una cuenta,{" "}
-              <a href="/login" className="text-dark">
+              <Link to="/login" className="text-dark">
                 iniciar sesión
-              </a>
+              </Link>
             </p>
-            <a href="/" className="text-dark d-block">
-              Volver al inicio
-            </a>
-            <a href="/userRegister" className="text-dark d-block">
+            <Link to="/" className="text-dark text-decoration-none">
+              <i className="bi bi-arrow-left-circle-fill text-success">
+                {" "}
+                Volver
+              </i>
+            </Link>
+            <Link to="/userRegister" className="text-dark d-block">
               Ver usuarios registrados
-            </a>
+            </Link>
           </div>
         </form>
       </div>

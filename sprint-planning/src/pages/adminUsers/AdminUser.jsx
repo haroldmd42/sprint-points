@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { Link } from 'react-router-dom';
 export function AdminUser() {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
@@ -31,9 +31,9 @@ export function AdminUser() {
     <>
       {" "}
       <div className=" fw-bold m-3">
-        <a href="/registrarme" className="text-dark">
-          <i className="bi bi-arrow-left-circle-fill text-success"></i> Volver
-        </a>
+        <Link to="/" className="text-dark text-decoration-none">
+            <i className="bi bi-arrow-left-circle-fill text-success"> Volver</i>
+          </Link>
       </div>
       <div className="container py-5">
         <h2 className="text-center mb-4 text-success">
@@ -46,7 +46,7 @@ export function AdminUser() {
             {users.map((user) => (
               <div
                 key={user.userId}
-                className="mb-4 pb-3 bg-light border border-dark rounded p-3"
+                className="mb-4 pb-5 bg-light border border-dark rounded p-3 shadow-lg"
                 style={{ width: "500px",height: "300px" }}
               >
                 <div className="d-flex justify-content-between align-items-center">
@@ -60,7 +60,7 @@ export function AdminUser() {
                     </label>
                     <p>{user.name}</p>
 
-                    <label className="form-label text-dark fw-bold p-0">
+                    <label className="form-label text-dark fw-bold">
                       Apellidos
                     </label>
                     <p>{user.lastName}</p>
