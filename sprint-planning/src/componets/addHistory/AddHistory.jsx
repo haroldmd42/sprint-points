@@ -1,31 +1,39 @@
 import { FaTrash } from "react-icons/fa";
 
-export function AddHistory({ id, onDelete }) {
+export function AddHistory({ id, onDelete, onChange }) {
+  const handleInputChange = (e) =>{
+    const { name, value } = e.target;
+    onChange(id, name, value);
+  }
   return (
     <>
       <div className="mb-3">
-        <label htmlFor="title" className="form-label text-dark fw-bold">
+        <label htmlFor={`title-${id}`} className="form-label text-dark fw-bold">
           Título de la Historia
         </label>
         <input
           type="text"
           className="form-control bg-transparent text-dark border-dark"
-          id="title"
+          id={`title-${id}`}
+          name="title"
           placeholder="Ej: Como usuario quiero poder filtrar resultados"
           required
+          onChange={handleInputChange}
         />
       </div>
 
       <div className="mb-4">
-        <label htmlFor="description" className="form-label text-dark fw-bold">
+        <label htmlFor={`description-${id}`} className="form-label text-dark fw-bold">
           Descripción
         </label>
         <textarea
           className="form-control bg-transparent text-dark border-dark"
-          id="description"
+          id={`description-${id}`}
+          name="description"
           rows="4"
           placeholder="Describe los objetivos, criterios de aceptación, etc."
           required
+          onChange={handleInputChange}
         ></textarea>
         
       </div>

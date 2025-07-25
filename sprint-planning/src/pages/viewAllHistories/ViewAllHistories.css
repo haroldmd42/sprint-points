@@ -1,0 +1,12 @@
+.codigo-general{
+    width: 140px;
+    padding: 2px;
+    height: 30px;
+    font-weight: bold;
+}
+.button-toggler {
+    background-color: transparent;
+    border: none;
+    color: #28a745; /* Color verde */
+    cursor: pointer;
+}

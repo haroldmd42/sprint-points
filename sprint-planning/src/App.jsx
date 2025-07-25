@@ -7,6 +7,8 @@ import RegisterUser from './pages/registerUser/RegisterUser';
 import AdminUser from './pages/adminUsers/AdminUser';
 import AdminBoard from './pages/adminBoard/AdminBoard';
 import CreateHistory from './pages/createHistory/CreateHistory';
+import ViewHistories from './pages/viewHistories/ViewHistories';
+import ViewAllHistories from './pages/viewAllHistories/ViewAllHistories';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
       <Route path="/userRegister" element={<AdminUser />} />
       <Route path="/adminBoard" element={<AdminBoard />} />
       <Route path="/createHistory" element={<CreateHistory />} />
+      <Route path="/viewHistories" element={<ViewHistories />} />
+      <Route path="/viewAllHistories" element={<ViewAllHistories />} />
+      {/* Puedes agregar más rutas según sea necesario */}
     </Routes>
   );
 }
